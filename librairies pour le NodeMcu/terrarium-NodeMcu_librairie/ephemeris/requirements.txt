@@ -1,0 +1,4 @@
+six>=1.9.0
+pyyaml
+bioblend>=0.10.0
+Jinja2

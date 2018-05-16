@@ -1,0 +1,227 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 95%;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    background-color : black;
+}
+
+h1 {
+	text-align: center;
+	color: #CFCE57;
+}
+
+.conteneur {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 5%;    
+}
+
+.conteneur1 {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-bettween;      
+    margin-top: 3%;    
+}
+
+.conteneur2 {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 5%;       
+}
+
+.conteneur3 {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10%;    
+}
+
+
+.element {
+    margin: auto;
+    text-align: center; 
+}
+
+
+.element3 {
+    margin-top: 2%;
+    text-align: center; 
+    width: 40%;
+}
+
+
+#date {
+    margin-left:  2%;
+    text-align: center;
+    font-size : 200%;
+    color:#90EE90;
+    }
+
+#heure {
+    margin-right:  2%;
+    text-align: center;
+    font-size     : 400%;   
+    color: #EF9090;
+    }
+
+#logout {    
+    padding: 2px 10px; 
+    background: #EA3230;
+    color: black;   
+    font-size: 18px;
+    font-style: italic;    
+    border-radius: 25pt;
+}
+
+#logout img {
+	display:none;
+	width: 25%;
+	height:25%;
+	margin:auto;
+}
+#logout:hover img {
+	display:block;
+}
+
+#histo, #accueil {
+    
+    padding: 2px 10px; 
+    background: #54E96B;
+    color: black;   
+    font-size: 18px;
+    font-style: italic;    
+    border-radius: 25pt;
+}
+
+#bdd, #bddadmin {
+    
+    padding: 2px 10px; 
+    background: #D9D960;
+    color: black;   
+    font-size: 18px;
+    font-style: italic;    
+    border-radius: 25pt;
+}
+
+#serpent {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
+
+#bddadmin {
+	text-align:center;			
+	background-color:#BEF781;
+	border-radius: 25pt;
+}
+
+#update {
+	text-align:center;			
+	background-color:#BEF781;
+	border-radius: 25pt;
+}
+
+#update:hover {	
+	text-align:center;		;	
+	border-radius: 25pt;
+	animation-name: update; /* nom de l'animation */
+	animation-duration: 3s; /* temps de l'animation (4s) */
+	animation-iteration-count: infinite; /* nombre de boucles (infinie) */
+	animation-timing-function: linear; /* accelération de l'animation (constant) */
+}	
+
+@keyframes update {
+from, to { background-color:#BEF781;}
+50% { background-color:#F05959;}
+}
+
+#serpent a {
+color: grey;
+padding: 20px 10px 10px 95px;
+background: rgba(0,0,0,0.5) url(../img/serpent.png) no-repeat 5px 10px;
+}
+
+/* première étape */
+#serpent a, #serpent a:hover, #serpent a:focus {
+color: white;
+animation-name: serpent; /* nom de l'animation */
+animation-duration: 4s; /* temps de l'animation (4s) */
+animation-iteration-count: infinite; /* nombre de boucles (infinie) */
+animation-timing-function: linear; /* accelération de l'animation (constant) */
+}
+/* deuxième étape */
+@-moz-keyframes serpent {   
+0% {background:rgba(0,0,0,0.4) url(../img/serpent.png) no-repeat 5px 10px;}
+50% {background:rgba(0,0,0,1) url(../img/serpent.png) no-repeat 40px 10px;}
+100% {background:rgba(0,0,0,0.4) url(../img/serpent.png) no-repeat 5px 10px;}
+}
+
+
+@-webkit-keyframes serpent {    
+0% {background:rgba(0,0,0,0.4) url(../img/serpent.png) no-repeat 5px 10px;}
+50% {background:rgba(0,0,0,1) url(../img/serpent.png) no-repeat 40px 10px;}
+100% {background:rgba(0,0,0,0.4) url(../img/serpent.png) no-repeat 5px 10px;}
+}
+
+#pc {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;     
+}
+
+#pc a {
+color: grey;
+padding: 15px 10px 10px 95px;
+background: rgba(0,0,0,0.5) url(../img/pc.png) no-repeat 5px 10px;
+}
+
+/* première étape */
+#pc a, #pc a:hover, #pc a:focus {
+color: white;
+animation-name: pc; /* nom de l'animation */
+animation-duration: 4s; /* temps de l'animation (4s) */
+animation-iteration-count: infinite; /* nombre de boucles (infinie) */
+animation-timing-function: linear; /* accelération de l'animation (constant) */
+}
+/* deuxième étape */
+@-moz-keyframes pc {    
+0% {background:rgba(0,0,0,0.4) url(../img/pc.png) no-repeat 5px 10px;}
+50% {background:rgba(0,0,0,1) url(../img/pc.png) no-repeat 40px 10px;}
+100% {background:rgba(0,0,0,0.4) url(../img/pc.png) no-repeat 5px 10px;}
+}
+
+
+
+  
+#cf  {  
+  position:absolute;
+  top:0;
+  animation: ser 8s infinite;
+  background: url(../img/serpent2.gif) 0 0 no-repeat; 
+  height: 120px;
+  width: 120px;  
+}
+
+ @keyframes ser {  
+  0% {background-position: 0 -100px; } 
+  60% {background-position: 0 -100px; } 
+  80% {background-position: 0 0; } 
+  100% {background-position: 0 -100px; } 
+}
+
