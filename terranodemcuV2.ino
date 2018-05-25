@@ -481,20 +481,15 @@ void processSyncEvent (NTPSyncEvent_t ntpEvent) {
         UTCOffset = 2; 
       } else { 
         UTCOffset = 1; 
-      }         
+      }   
+      // On lance la fonction qui calcul le lever et coucher du soleil en fonction de sa position et de la date
       printRiseAndSet(ville, lat, lon, UTCOffset, day(),month(),year());
   } else {        
-    if (ntpEvent == noResponse) {            
-      NTP.stop();
-      NTP.begin (serveurNTP, timeZone, true);
-      NTP.setInterval (301);  
-      NTP.getTimeDateString (NTP.getLastNTPSync ());
+    if (ntpEvent == noResponse) {         // si on a pas de reponse du serveur NTP on consèrve la dernière synchronisation
+		NTP.getTimeDateString (NTP.getLastNTPSync ());
     }                 
-    else if (ntpEvent == invalidAddress) {            
-      NTP.stop();
-      NTP.begin (serveurNTP, timeZone, true);
-      NTP.setInterval (301);
-      NTP.getTimeDateString (NTP.getLastNTPSync ());
+    else if (ntpEvent == invalidAddress) {   // si l'adresse du serveur NTP devenait erroné (improbable) on consèrve la dernière synchronisation
+		NTP.getTimeDateString (NTP.getLastNTPSync ());
     }
   } 
 }  
@@ -506,7 +501,7 @@ void gestiontemps() {
     if (wifiFirstConnected) {
           wifiFirstConnected = false;
           NTP.begin (serveurNTP, timeZone, true);
-          NTP.setInterval (301);          
+          NTP.setInterval (63);          
     }
     // Si on a une synchronisation NTP  on affiche les infos
     if (syncEventTriggered) {
@@ -565,6 +560,7 @@ void setup(void) {
   Serial.println();
   Serial.print("L'adresse IP est  ");
   Serial.println(WiFi.localIP());
+  wifiFirstConnected = false;
   // on pépare la fonction NTP
   NTP.onNTPSyncEvent ([](NTPSyncEvent_t event) {
         ntpEvent = event;
@@ -574,7 +570,7 @@ void setup(void) {
   // On démarre la synchronisation du temps au pool NTP
   NTP.begin (serveurNTP, timeZone, true);  
   // On donne l'intervalle de synchronisation
-  NTP.setInterval (301); 
+  NTP.setInterval (63); 
   delay(100);  
   // On démarre le service DNS qui permet de remplacer l'IP du NodeMCU par un noms de host
   MDNS.begin(host);
