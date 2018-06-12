@@ -56,9 +56,9 @@ if(empty($_SESSION['login']))
 				<div class="conteneur">                                                    <!-- on replace ici l'ip de votre nodemcu -->
 					
 					<div class="element">
-						<h1>Flash du NodeMCU</h1>
-						
-						<iframe id="update" src="http://terranodemcu.local/update"></iframe>						
+						<h1>Panneau de controle des fonctions du nodemcu</h1>
+												
+						<iframe id="update" class="iframe" src="http://terranodemcu.local"></iframe>						
 						
 					</div>	
 					

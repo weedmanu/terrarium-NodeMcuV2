@@ -11,14 +11,17 @@ amélioration du code et modification de la gestion de la lumière :
 	
 Dans le programme **terranodemcu_V2.ino** voici les lignes à modifier avec vos paramètre :
 
-* ligne 19 : votre SSID (nom de votre réseau wifi)
-* ligne 20 : le mot de passe du wifi
-* ligne 21 : ip du serveur web (NAS ou Raspberry)
-* ligne 22 : on défini un login pour la fonction update
-* ligne 23 : votre mot de passe pour la fonction update
-* ligne 24 : le nom de votre ville ou village
-* ligne 25 et 26: la latitude et la longitude (https://www.coordonneesgps.net/coordonnees-gps/)
-* ligne 28 : adresse I2C de votre écran
+    * ligne 112 : votre SSID (nom de votre réseau wifi)
+    * ligne 113 : le mot de passe du wifi
+    * ligne 114 : ip du serveur web (NAS ou Raspberry)
+    * ligne 115 : on défini un login pour la fonction update
+    * ligne 116 : votre mot de passe pour la fonction update
+    * ligne 117 : le nom de votre ville ou village
+    * ligne 118 et 119: la latitude et la longitude (https://www.coordonneesgps.net/coordonnees-gps/)
+    * ligne 121 : adresse I2C de votre écran
+    * ligne 124 À 126 : vos prénoms, date anniversaire, heure d'avertissement
+    * ligne 127 À 128 : date des repas, heure d'avertissement
+
 
 
 le programme **terranodemcuV2.ino** envoie les datas sur le fichier **sondes.php** du site web.

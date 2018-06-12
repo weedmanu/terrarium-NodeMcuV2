@@ -24,18 +24,6 @@ CREATE TABLE `ephem` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `etatsondes`
---
-
-CREATE TABLE `etatsondes` (
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `sondepointchaud` int(1) NOT NULL,
-  `sondepointfroid` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `temphumi`
 --
 
